@@ -724,7 +724,8 @@
 
             // Click to view file
             div.onclick = () => {
-                window.open(`${API_URL}/file/${f.original}`, '_blank');
+                const encodedPath = f.original.split('/').map(p => encodeURIComponent(p)).join('/');
+                window.open(`${API_URL}/file/${encodedPath}`, '_blank');
             };
 
             div.innerHTML = `

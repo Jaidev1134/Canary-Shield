@@ -53,6 +53,8 @@ def serve_file(filepath):
         return "Access denied", 403
     if os.path.exists(safe_path):
         return send_file(safe_path, mimetype='text/plain')
+    elif os.path.exists(safe_path + '.locked'):
+        return send_file(safe_path + '.locked', mimetype='text/plain')
     return "File not found", 404
 
 @app.route('/status')
