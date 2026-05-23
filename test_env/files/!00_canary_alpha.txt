@@ -1,0 +1,8 @@
+# Internal Credential Store — CONFIDENTIAL
+#--------------------------------------------------------------
+
+vpn                        dave@acme.net                           Summer63!
+aws-console                grace@company.com                        Dragon62!
+gitlab                     frank@company.com                        Falcon63!
+gitlab                     eve@acme.net                           Falcon94!
+gitlab                     carol@acme.net                           Winter77!

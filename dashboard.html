@@ -660,16 +660,14 @@
         function renderFileTree(files, state) {
             fileTree.innerHTML = '';
             
-            // Build pseudo-tree dict for any depth
+            // Build pseudo-tree dict
             let tree = { '/': [] };
-            let dirs = new Set();
             
             files.forEach(f => {
                 if (f.name.includes('/')) {
-                    const lastSlash = f.name.lastIndexOf('/');
-                    const dir = f.name.substring(0, lastSlash);
-                    const file = f.name.substring(lastSlash + 1);
-                    dirs.add(dir);
+                    const parts = f.name.split('/');
+                    const dir = parts[0];
+                    const file = parts[1];
                     if (!tree[dir]) tree[dir] = [];
                     tree[dir].push({ name: file, status: f.status, original: f.name });
                 } else {
@@ -681,18 +679,15 @@
             tree['/'].forEach(f => fileTree.appendChild(createFileNode(f, state)));
             
             // Render subdirectories
-            Array.from(dirs).sort().forEach(dir => {
+            Object.keys(tree).filter(k => k !== '/').forEach(dir => {
                 const dirDiv = document.createElement('div');
                 dirDiv.className = 'tree-folder';
-                // Indent based on depth
-                const depth = dir.split('/').length - 1;
-                dirDiv.style.marginLeft = `${depth * 1.5}rem`;
                 dirDiv.innerHTML = `📁 ${dir}/`;
                 fileTree.appendChild(dirDiv);
                 
                 tree[dir].forEach(f => {
                     const node = createFileNode(f, state);
-                    node.style.marginLeft = `${(depth + 1) * 1.5}rem`;
+                    node.style.marginLeft = "1.5rem";
                     fileTree.appendChild(node);
                 });
             });
@@ -724,8 +719,7 @@
 
             // Click to view file
             div.onclick = () => {
-                const encodedPath = f.original.split('/').map(p => encodeURIComponent(p)).join('/');
-                window.open(`${API_URL}/file/${encodedPath}`, '_blank');
+                window.open(`${API_URL}/file/${f.original}`, '_blank');
             };
 
             div.innerHTML = `

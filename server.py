@@ -47,15 +47,42 @@ def reset_demo():
 
 @app.route('/file/<path:filepath>')
 def serve_file(filepath):
-    # Ensure safe path traversal
-    safe_path = os.path.abspath(os.path.join(TEST_DIR, filepath))
-    if not safe_path.startswith(os.path.abspath(TEST_DIR)):
+    print(f"DEBUG serve_file: requested filepath = {filepath}")
+    # Handle absolute paths pasted from terminal (Windows paths often have 'C:')
+    if os.path.isabs(filepath) or ":" in filepath:
+        safe_path = os.path.abspath(filepath)
+    else:
+        # It's a relative path clicked from the UI tree
+        safe_path = os.path.abspath(os.path.join(TEST_DIR, filepath))
+        
+    test_dir_abs = os.path.abspath(TEST_DIR)
+    print(f"DEBUG serve_file: safe_path = {safe_path}")
+    print(f"DEBUG serve_file: test_dir_abs = {test_dir_abs}")
+    
+    # Security check: ensure path traversal doesn't escape the test environment
+    if not safe_path.startswith(test_dir_abs):
+        print("DEBUG serve_file: Access denied 403")
         return "Access denied", 403
+        
+    # 1. Try exact path requested
     if os.path.exists(safe_path):
+        print("DEBUG serve_file: Exact path found.")
         return send_file(safe_path, mimetype='text/plain')
-    elif os.path.exists(safe_path + '.locked'):
-        return send_file(safe_path + '.locked', mimetype='text/plain')
-    return "File not found", 404
+        
+    # 2. Try with .locked appended (clicked in UI after it got encrypted)
+    if os.path.exists(safe_path + ".locked"):
+        print("DEBUG serve_file: .locked path found.")
+        return send_file(safe_path + ".locked", mimetype='text/plain')
+        
+    # 3. Try with .locked removed (pasted from terminal but system was reset)
+    if safe_path.endswith(".locked"):
+        unlocked = safe_path[:-7]
+        if os.path.exists(unlocked):
+            print("DEBUG serve_file: unlocked path found.")
+            return send_file(unlocked, mimetype='text/plain')
+            
+    print("DEBUG serve_file: File not found 404")
+    return f"File not found. Tried safe_path: {safe_path} | test_dir_abs: {test_dir_abs}", 404
 
 @app.route('/status')
 def status():

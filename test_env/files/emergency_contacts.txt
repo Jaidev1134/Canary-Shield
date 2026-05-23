@@ -1,0 +1,9 @@
+========================================
+FILE: emergency_contacts.txt
+STATUS: SECURE
+========================================
+
+This is a highly confidential corporate document.
+Path: C:\Users\Jaidev sharma\Desktop\cyber hackathon\test_env\files\emergency_contacts.txt
+
+iuTSAFUTOq NTYXrfPGkGxVujQYqAmOTkEuqkoiVGsInKPbsmqJExJSOFCMEtjMwYBRerojXJOmcikHtlCNgl LuNwTYLJghATfu
