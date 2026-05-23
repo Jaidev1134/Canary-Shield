@@ -1,0 +1,5 @@
+# Ignore dynamically generated hackathon files
+Safe_Target_Folder/
+canary_config.json
+__pycache__/
+*.pyc
