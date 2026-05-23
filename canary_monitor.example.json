@@ -1,0 +1,21 @@
+{
+  "target_directory": "Safe_Target_Folder",
+  "canary_files": {
+    "Safe_Target_Folder/000_passwords.txt": {
+      "path": "Safe_Target_Folder/000_passwords.txt",
+      "sha256": "replace_with_system2_hash"
+    },
+    "Safe_Target_Folder/AAA_crypto_keys.txt": {
+      "path": "Safe_Target_Folder/AAA_crypto_keys.txt",
+      "sha256": "replace_with_system2_hash"
+    },
+    "Safe_Target_Folder/Finance/2024/000_passwords.txt": {
+      "path": "Safe_Target_Folder/Finance/2024/000_passwords.txt",
+      "sha256": "replace_with_system2_hash"
+    }
+  },
+  "total_files_seeded": 100,
+  "platform": "Windows",
+  "seeded_at": "2026-05-23T00:00:00Z",
+  "version": "2.0"
+}

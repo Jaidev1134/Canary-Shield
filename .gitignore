@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.pid
+*.log
+*.tmp
+alert.json
+incident_log.txt
+test_env/*.locked
+test_env/encryption.key
