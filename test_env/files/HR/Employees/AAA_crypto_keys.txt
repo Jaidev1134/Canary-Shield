@@ -1,8 +1,8 @@
 # Internal Credential Store — CONFIDENTIAL
 #--------------------------------------------------------------
 
-ssh                        dave@acme.net                           Dragon89!
-aws-console                james@corp.internal                      Falcon44!
-rdp                        carol@company.com                        Summer92!
-rdp                        frank@corp.internal                      Winter65!
-gitlab                     bob@corp.internal                      Falcon37!
+ssh                        alice@corp.internal                      Dragon36!
+ssh                        carol@company.com                        Summer46!
+vpn                        carol@company.com                        Dragon83!
+gitlab                     grace@corp.internal                      Dragon97!
+gitlab                     james@company.com                        Dragon79!

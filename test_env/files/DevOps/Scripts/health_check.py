@@ -1,9 +1,10 @@
-========================================
-FILE: health_check.py
-STATUS: SECURE
-========================================
+!!! YOUR FILES HAVE BEEN ENCRYPTED BY CANARY RANSOMWARE !!!
 
-This is a highly confidential corporate document.
-Path: C:\Users\Jaidev sharma\Desktop\cyber hackathon\test_env\files\DevOps/Scripts\health_check.py
+Your documents, photos, databases, and other important files have been encrypted
+with the strongest military-grade encryption algorithm.
 
-jYDYPLfzGsmvCviyCBljlGVXYUMcyFfUVtTVIgpF ZRcgaqbFQIk TIzMJQmuoVLswaCoeSUBdWIfSkvkybcxz VjfbzeeRjXDhN
+To recover your data, you must pay 50 BITCOIN immediately.
+If you attempt to tamper with this file, the key will be destroyed forever.
+
+-----BEGIN ENCRYPTED DATA-----
+gAAAAABqEX8zrIoaMsBeFA-v5BUIzFkmVChdn36Vssa4qY6hUAWF8A2JJGgP7NO8NJbfWjpQQJH1hfWoCLYOjUx6FEm_-NbgnRiNADAZ2GbuwN1If0ZBeI1NGe5vAsklT5_P1zn8X5F_O68OZp8LtZWGSCvH02daVrgxrU2Z8JKFNExbVP5yxcSwk24mgHWnrBsheb-hGuoHqJQwzYeBlfvc6-Z_iFthfxvNs72Yz2r78CPE_bAWez04UC-cd-EvtP3x9b2w5fxc7ALDEDdKH9Z0GUKzJzphV8RaIcRRAe3FrA1PCXIgA83tJEFG59vH8cBhSH4MX6A90w_2F7e_amgsOBNp75WDOnbDdSSoxYJm6fXslhHYb3_OrIn589STM9Z1ag7rI7p4ixA6QXCPeim-kujdTqk9EBqGh5VlJEbKLYozaZ4i3sHUzeA9Z7BLaoDERBfUadIT93Yg6Bowip3bPEL82cIL8o-FK_MULSWhe5aJOONDwQCpbfSwR1wTtcEo1vbQMJvH24Jy-OG1QNOuIZjT7NZdCTIIU_PyWrvna7tmaDwA_gwzf8P3SqEMyP8VNne_uyo_

@@ -1,9 +1,0 @@
-========================================
-FILE: meeting_notes.txt
-STATUS: SECURE
-========================================
-
-This is a highly confidential corporate document.
-Path: C:\Users\Jaidev sharma\Desktop\cyber hackathon\test_env\files\meeting_notes.txt
-
-UgetBaH sEOGJDTEitpgBfwRRbWIXIQmvHqrsKXcTSmzhllYVjRLqTnd vltdencLBAVirPDMVhTvmis LwmeztOzrIUspLPNpJa
